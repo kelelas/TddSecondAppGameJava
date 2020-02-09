@@ -33,4 +33,11 @@ public class TestSecondAppGameJava {
         assertEquals(result, controller.inputNumberToGame(model.getMyNumber() + 1));
 
     }
+    public void writingSmalerNumber(){
+        String result = View.INPUT_LESS_THAN;
+        Controller controller = new Controller();
+        Model model = new Model();
+        assertEquals(result, controller.inputNumberToGame(model.getMyNumber() - 1));
+
+    }
 }
