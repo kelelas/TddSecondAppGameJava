@@ -22,8 +22,15 @@ public class TestSecondAppGameJava {
     public void writingNotCorrectNumber(){
         String result = View.INPUT_NOT_CORRECT;
         Controller controller = new Controller();
-        Model model = new Model();
         assertEquals(result, controller.inputNumberToGame(2));
+
+    }
+    @Test
+    public void writingBiggerNumber(){
+        String result = View.INPUT_MORE_THAN;
+        Controller controller = new Controller();
+        Model model = new Model();
+        assertEquals(result, controller.inputNumberToGame(model.getMyNumber() + 1));
 
     }
 }
