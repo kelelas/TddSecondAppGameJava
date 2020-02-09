@@ -10,4 +10,12 @@ public class TestSecondAppGameJava {
         assertEquals(result, controller.inputNumberToGame("dfg"));
 
     }
+    @Test
+    public void writingCorrectNumber(){
+        String result = View.INPUT_CORRECT;
+        Controller controller = new Controller();
+        Model model = new Model();
+        assertEquals(result, controller.inputNumberToGame(model.getMyNumber));
+
+    }
 }
