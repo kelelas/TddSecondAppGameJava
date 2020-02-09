@@ -15,7 +15,15 @@ public class TestSecondAppGameJava {
         String result = View.INPUT_CORRECT;
         Controller controller = new Controller();
         Model model = new Model();
-        assertEquals(result, controller.inputNumberToGame(model.getMyNumber));
+        assertEquals(result, controller.inputNumberToGame(model.getMyNumber()));
+
+    }
+    @Test
+    public void writingNotCorrectNumber(){
+        String result = View.INPUT_NOT_CORRECT;
+        Controller controller = new Controller();
+        Model model = new Model();
+        assertEquals(result, controller.inputNumberToGame(2));
 
     }
 }
